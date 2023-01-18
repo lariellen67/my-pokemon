@@ -35,14 +35,25 @@ declare module 'styled-components' {
         CEMENT: string;
         SHADOW: string;
       };
-      OTHERS: {
-        LIGHT_BLUE: string;
-        SAPPHIRE: string;
-        AZURE: string;
-        HEAVENLY: string;
-        TOPAZ: string;
-        YELLOW: string;
-        SAND: string;
+      TYPES: {
+        BUG: string;
+        ELECTRIC: string;
+        FIRE: string;
+        GRASS: string;
+        NORMAL: string;
+        ROCK: string;
+        DARK: string;
+        FAIRY: string;
+        FLYING: string;
+        GROUND: string;
+        POISON: string;
+        STEEL: string;
+        DRAGON: string;
+        FIGHTING: string;
+        GHOST: string;
+        ICE: string;
+        PSYCHIC: string;
+        WATER: string;
       };
     };
   }

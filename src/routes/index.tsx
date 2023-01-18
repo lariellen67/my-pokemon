@@ -18,7 +18,7 @@ function Routes() {
         }
       >
         <Route path="/" element={<Main />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/details/:pokemonId" element={<Details />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/surprise" element={<Surprise />} />
       </Route>

@@ -1,7 +1,7 @@
 import logo from '../../assets/pokeball-minimalist.png';
 import {
   Container,
-  Picture,
+  Image,
   Content,
   Wrapper,
   Logo,
@@ -9,17 +9,16 @@ import {
   Number,
 } from './styles';
 
-interface ILabel {
+interface ICard {
   number: number;
   name: string;
-  picture: any;
-  onClickLabel: any;
+  image: any;
 }
 
-function Label({ number, name, picture, onClickLabel }: ILabel) {
+function Card({ number, name, image }: ICard) {
   return (
-    <Container onClick={onClickLabel}>
-      <Picture src={picture} />
+    <Container>
+      <Image src={image} />
       <Content>
         <Wrapper>
           <Logo src={logo} />
@@ -31,4 +30,4 @@ function Label({ number, name, picture, onClickLabel }: ILabel) {
   );
 }
 
-export { Label };
+export { Card };

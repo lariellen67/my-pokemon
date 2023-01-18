@@ -7,9 +7,6 @@ export async function getPokemonsList() {
     list.push({
       number: response.data.id,
       name: response.data.name,
-      weight: response.data.weight,
-      height: response.data.height,
-      type: response.data.types[0].type.name,
       image: response.data.sprites.front_default,
     });
   }

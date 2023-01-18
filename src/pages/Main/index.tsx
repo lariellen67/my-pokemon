@@ -2,6 +2,7 @@ import cuid from 'cuid';
 import { useMemo, useState, useContext } from 'react';
 import ReactLoading from 'react-loading';
 import { useQuery } from 'react-query';
+import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
 
 import { Label } from '../../components/Label';
@@ -13,6 +14,7 @@ function Main() {
   const pageSize = 20;
   const [currentPage, setCurrentPage] = useState(1);
   const { palette } = useContext(ThemeContext);
+  const navigate = useNavigate();
 
   const { data, isLoading } = useQuery(['pokemons'], async () => {
     const response = await getPokemonsList();
@@ -36,6 +38,13 @@ function Main() {
       {currentTableData?.map((item) => {
         return (
           <Label
+            onClickLabel={() =>
+              navigate(`/details/${item.number}`, {
+                state: {
+                  id: item.number,
+                },
+              })
+            }
             key={cuid()}
             picture={item.image}
             number={item.number}
