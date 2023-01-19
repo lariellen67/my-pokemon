@@ -1,8 +1,8 @@
-## Project Name: My Pokemon
+## :tada: Project Name: My Pokemon
 
 An application developed with the objective of listing, detailing and favorite pokemons, based on user preference.
 
-## Project Screen Shot(s)
+## :movie_camera: Project Screen Shot(s)
 
 #### Example:
 
@@ -22,6 +22,8 @@ An application developed with the objective of listing, detailing and favorite p
 - Favorites Page, case when there's pokemons favorited.
   ![Screenshot](/src/assets/screenshot4.png)
 
+- Surprise Page, well you have to run this project to find out what's in there .
+
 ## :rocket: Technologies & Tools
 
 This project was developed with the following technologies & tools:
@@ -35,7 +37,7 @@ This project was developed with the following technologies & tools:
 - [Semantic UI](https://react.semantic-ui.com/)
 - [VS Code][vc] with [EditorConfig][vceditconfig], [Prettier][vcprettier] and [ESLint][vceslint]
 
-## Installation and Setup Instructions
+## :information_source: Installation and Setup Instructions
 
 #### Example:
 
