@@ -2,7 +2,7 @@
 
 An application developed with the objective of listing, detailing and favorite pokemons, based on user preference.
 
-## :movie_camera: Project Screen Shot(s)
+## :camera: Project Screen Shot(s)
 
 #### Example:
 
