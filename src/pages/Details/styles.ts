@@ -25,5 +25,5 @@ export const Content = styled.div`
   height: 100%;
   width: 40%;
   background-color: ${({ theme }) => theme.palette.GENERAL.PRIMARY};
-  box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 6px 6px ${({ theme }) => theme.palette.SHADES_OF_GREY.SHADOW};
 `;

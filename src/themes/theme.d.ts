@@ -29,11 +29,7 @@ declare module 'styled-components' {
         CLEAR: string;
         HOVER: string;
         DARK: string;
-        MEDIUM: string;
         POLISHED: string;
-        IRON: string;
-        PLATINUM: string;
-        CEMENT: string;
         SHADOW: string;
       };
       TYPES: {

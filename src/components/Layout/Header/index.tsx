@@ -4,11 +4,13 @@ import { Button } from 'semantic-ui-react';
 import { ThemeContext } from 'styled-components';
 
 import logo from '../../../assets/pokeball-minimalist.png';
+import pokemon from '../../../assets/pokemon-logo.png';
 import {
   Container,
   LeftContent,
   Touchable,
   Logo,
+  Pokemon,
   RightContent,
   Menu,
   Item,
@@ -23,6 +25,9 @@ function Header() {
       <LeftContent>
         <Touchable onClick={() => navigate('/')}>
           <Logo src={logo} />
+        </Touchable>
+        <Touchable onClick={() => navigate('/')}>
+          <Pokemon src={pokemon} />
         </Touchable>
       </LeftContent>
       <RightContent>

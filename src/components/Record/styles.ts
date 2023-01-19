@@ -14,7 +14,7 @@ export const Container = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.palette.BACKGROUND.LABEL};
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 6px ${({ theme }) => theme.palette.SHADES_OF_GREY.SHADOW};
   padding: 10px 0 30px;
   cursor: pointer;
 `;

@@ -6,11 +6,11 @@ An application developed with the objective of listing, detailing and favorite p
 
 #### Example:
 
-![Screenshot](screenshot1.png)
+![Screenshot](/src/assets/screenshot1.png)
 
-![Screenshot](screenshot2.png)
+![Screenshot](/src/assets/screenshot2.png)
 
-![Screenshot](screenshot3.png)
+![Screenshot](/src/assets/screenshot3.png)
 
 ## Installation and Setup Instructions
 

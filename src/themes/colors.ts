@@ -26,11 +26,7 @@ export default {
       CLEAR: '#E7E9EB',
       HOVER: '#E1E1E1',
       DARK: '#32363F',
-      MEDIUM: '#999999',
       POLISHED: '#DDDDDD',
-      IRON: '#ABABAB',
-      PLATINUM: '#616161',
-      CEMENT: 'rgba(221, 221, 221, 0.4)',
       SHADOW: 'rgba(0, 0, 0, 0.25)',
     },
     TYPES: {

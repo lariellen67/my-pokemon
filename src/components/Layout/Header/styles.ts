@@ -20,6 +20,11 @@ export const Logo = styled.img`
   height: 50px;
 `;
 
+export const Pokemon = styled.img`
+  height: 50px;
+  margin-left: 10px;
+`;
+
 export const RightContent = styled.div`
   display: flex;
   flex: 1;

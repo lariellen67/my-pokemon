@@ -1,7 +1,12 @@
+import { Card } from '../../components/Card';
 import { Container } from './styles';
 
 function Surprise() {
-  return <Container>Surprise</Container>;
+  return (
+    <Container>
+      <Card />
+    </Container>
+  );
 }
 
 export { Surprise };

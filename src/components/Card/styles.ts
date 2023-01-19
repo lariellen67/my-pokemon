@@ -1,65 +1,65 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Fragment = styled.div`
+  .flip-card {
+    background-color: ${({ theme }) => theme.palette.BACKGROUND.DEFAULT};
+    width: 290px;
+    height: 400px;
+    perspective: 1000px;
+    border-radius: 10px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0
+      ${({ theme }) => theme.palette.SHADES_OF_GREY.SHADOW};
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+
+  .flip-card-front {
+    background-color: ${({ theme }) => theme.palette.BACKGROUND.DEFAULT};
+    color: black;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+`;
+
+export const FrontImage = styled.img`
+  width: 290px;
+  height: 400px;
+  margin-right: 2px;
+  transform: rotate(-1deg);
+`;
+
+export const BackImage = styled.img`
+  width: 290px;
+  height: 400px;
+  margin-right: 2px;
+`;
+
+export const WinCardMessage = styled.span`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 75px;
-  max-height: 75px;
-  width: 210px;
-  max-width: 210px;
-  margin: 0 10px 10px 0;
-  background-color: ${({ theme }) => theme.palette.BACKGROUND.LABEL};
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-`;
-
-export const Image = styled.img`
-  height: 75px;
-  width: 75px;
-  align-self: center;
-`;
-
-export const Content = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-  margin: 0;
-  padding: 0;
-  background-color: ${({ theme }) => theme.palette.BACKGROUND.WHITE};
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 5px;
-`;
-
-export const Logo = styled.img`
-  height: 18px;
-  width: 18px;
-  margin-right: 5px;
-`;
-
-export const Number = styled.p`
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
-`;
-
-export const Name = styled.p`
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
+  background-color: transparent;
+  height: 50px;
+  margin-bottom: 20px;
 `;
