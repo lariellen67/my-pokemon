@@ -13,6 +13,7 @@ export default {
       SHADOW: 'rgba(0, 0, 0, 0.1)',
       LABEL: '#C6B8E9',
       LOADING: 'rgba(31, 33, 36, 0.95)',
+      FAVORITE: '#D4D',
     },
     TEXT: {
       PRIMARY: 'rgba(0, 0, 0, 0.87)',
@@ -26,7 +27,7 @@ export default {
       HOVER: '#E1E1E1',
       DARK: '#32363F',
       MEDIUM: '#999999',
-      POLISHED: '#7F7F7F',
+      POLISHED: '#DDDDDD',
       IRON: '#ABABAB',
       PLATINUM: '#616161',
       CEMENT: 'rgba(221, 221, 221, 0.4)',

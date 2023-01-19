@@ -10,6 +10,7 @@ export const Container = styled.div`
   margin: 0;
   padding: 20px 70px;
   background-color: ${({ theme }) => theme.palette.BACKGROUND.DEFAULT};
+  overflow: hidden;
 `;
 
 export const LoadingContainer = styled.div`

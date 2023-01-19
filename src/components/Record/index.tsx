@@ -1,4 +1,5 @@
-import { Divider, Button } from 'semantic-ui-react';
+import { useState } from 'react';
+import { Divider } from 'semantic-ui-react';
 
 import logo from '../../assets/pokeball-minimalist.png';
 import { useColor } from '../../utils/useColor';
@@ -14,6 +15,9 @@ import {
   Type,
   DividerText,
   Move,
+  Touchable,
+  Heart,
+  HeartFilled,
 } from './styles';
 
 interface IRecord {
@@ -37,11 +41,38 @@ function Record({
   moveOne,
   moveTwo,
 }: IRecord) {
+  const [favorited, setFavorited] = useState(false);
   const pokemonType = type || '';
+  const favoritePokemon = {
+    name,
+    image,
+    number,
+  };
+
+  function handleFavorite() {
+    if (favorited) {
+      setFavorited(true);
+    } else {
+      setFavorited(true);
+      const a: any = localStorage.getItem('favorites');
+      const getItem: any = JSON.parse(a);
+      if (getItem === null) {
+        localStorage.setItem('favorites', JSON.stringify([favoritePokemon]));
+      } else {
+        const b = [...getItem, favoritePokemon];
+        if (b?.length <= 20) {
+          localStorage.setItem('favorites', JSON.stringify(b));
+        }
+      }
+    }
+  }
+
   return (
     <Container>
       <ButtonContainer>
-        <Button circular icon="heart" />
+        <Touchable onClick={handleFavorite}>
+          {favorited ? <HeartFilled /> : <Heart />}
+        </Touchable>
       </ButtonContainer>
       <Image src={image} />
       <Wrapper>

@@ -14,6 +14,7 @@ export const Container = styled.div`
   background: linear-gradient(rgba(31, 33, 36, 0.95), rgba(31, 33, 36, 0.95)),
     url(${background}) no-repeat;
   background-size: cover;
+  overflow: hidden;
 `;
 
 export const Content = styled.div`

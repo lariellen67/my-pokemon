@@ -1,3 +1,4 @@
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import styled from 'styled-components';
 
 interface ITypeProps {
@@ -24,7 +25,7 @@ export const ButtonContainer = styled.div`
   justify-content: flex-end;
   width: 100%;
   padding: 0;
-  margin-right: 5px;
+  margin-right: 10px;
 `;
 
 export const Image = styled.img`
@@ -65,7 +66,7 @@ export const Name = styled.p`
   font-size: 24px;
 `;
 
-export const Info = styled.p`
+export const Info = styled.span`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -106,3 +107,26 @@ export const Move = styled.p`
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
 `;
+
+export const Touchable = styled.button`
+  padding: 0;
+  border: 0;
+  height: 30px;
+  width: 30px;
+  outline: none;
+  cursor: pointer;
+  background-color: ${({ theme }) => theme.palette.SHADES_OF_GREY.POLISHED};
+  border-radius: 15px;
+`;
+
+export const Heart = styled(FaRegHeart).attrs((props) => ({
+  ...props,
+  size: 16,
+  color: props.theme.palette.SHADES_OF_GREY.DEFAULT,
+}))``;
+
+export const HeartFilled = styled(FaHeart).attrs((props) => ({
+  ...props,
+  size: 16,
+  color: props.theme.palette.BACKGROUND.FAVORITE,
+}))``;

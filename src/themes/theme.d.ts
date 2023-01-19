@@ -16,6 +16,7 @@ declare module 'styled-components' {
         SHADOW: string;
         LABEL: string;
         LOADING: string;
+        FAVORITE: string;
       };
       TEXT: {
         PRIMARY: string;
