@@ -56,10 +56,13 @@ function Record({
       setFavorited(true);
       const a: any = localStorage.getItem('favorites');
       const getItem: any = JSON.parse(a);
+      // verify if getItem is null, if it is set the first data on localStorage
       if (getItem === null) {
         localStorage.setItem('favorites', JSON.stringify([favoritePokemon]));
       } else {
+        // if getItem is not null, will set a new favorite plus the information who's already there
         const b = [...getItem, favoritePokemon];
+        // limits the number of favorites to 20
         if (b?.length <= 20) {
           localStorage.setItem('favorites', JSON.stringify(b));
         }

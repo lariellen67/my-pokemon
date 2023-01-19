@@ -1,3 +1,4 @@
+// Favorites screen, where all the pokemons you have favorited will appear
 import cuid from 'cuid';
 import { useNavigate } from 'react-router-dom';
 import { Message } from 'semantic-ui-react';
@@ -10,6 +11,7 @@ function Favorites() {
   const navigate = useNavigate();
 
   const getItem: any = localStorage.getItem('favorites');
+  // turn the localStorage content into json
   const data = JSON.parse(getItem);
 
   return (
@@ -36,6 +38,7 @@ function Favorites() {
         <Content>
           {data?.map((item: any) => {
             return (
+              // here is possible to go to the details screen too
               <Label
                 onClickLabel={() =>
                   navigate(`/details/${item.number}`, {
@@ -53,6 +56,7 @@ function Favorites() {
           })}
         </Content>
       ) : (
+        // component showed when there's no pokemon favorite yet
         <NotFoundContainer>
           <NotFound src={notfound} />
         </NotFoundContainer>

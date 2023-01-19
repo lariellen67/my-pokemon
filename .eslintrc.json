@@ -36,6 +36,7 @@
       "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
       "no-underscore-dangle": "off",
       "no-await-in-loop": "off",
+      "consistent-return": "off",
       "jsx-a11y/label-has-associated-control": "off",
       "@typescript-eslint/no-explicit-any": "off",
       "import-helpers/order-imports": [

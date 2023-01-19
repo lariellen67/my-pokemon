@@ -1,3 +1,5 @@
+// Details screen, here will be shown one pokemon at time
+
 import { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import { useLocation } from 'react-router-dom';
@@ -15,6 +17,7 @@ function Details() {
     setId(pokemonId);
   }, [pokemonId]);
 
+  // call api using useQuery
   const { data } = useQuery(['pokemons', { id }], async () => {
     const response = await getPokemonById(pokemonId);
     return response;
@@ -23,6 +26,9 @@ function Details() {
   return (
     <Container>
       <Content>
+        {
+          // the record component show on screen an image from pokemon and seven different informations about it
+        }
         <Record
           image={data?.image}
           name={data?.name}

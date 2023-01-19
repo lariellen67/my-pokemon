@@ -1,3 +1,4 @@
+// Main screen, where the magic happens, here all the pokemons are listed, 20 for each page
 import cuid from 'cuid';
 import { useMemo, useState, useContext } from 'react';
 import ReactLoading from 'react-loading';
@@ -16,6 +17,7 @@ function Main() {
   const { palette } = useContext(ThemeContext);
   const navigate = useNavigate();
 
+  // call api using useQuery
   const { data, isLoading } = useQuery(['pokemons'], async () => {
     const response = await getPokemonsList();
     return response;
@@ -23,6 +25,7 @@ function Main() {
 
   const lenght: any = data?.length || [];
 
+  // function to control the number of pokemons on each page
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * pageSize;
     const lastPageIndex = firstPageIndex + pageSize;
@@ -30,6 +33,7 @@ function Main() {
   }, [currentPage, data]);
 
   return isLoading ? (
+    // this component is presented on screen, while the api's still bringing the data
     <LoadingContainer>
       <ReactLoading type="spin" color={palette.GENERAL.PRIMARY} />
     </LoadingContainer>
@@ -39,12 +43,14 @@ function Main() {
         return (
           <Label
             onClickLabel={() =>
+              // when the pokemon label is clicked, the application will redirect you to the details page
               navigate(`/details/${item.number}`, {
                 state: {
                   id: item.number,
                 },
               })
             }
+            // cuid generate an unique hash, it can be used as a key of the component
             key={cuid()}
             picture={item.image}
             number={item.number}
@@ -52,6 +58,9 @@ function Main() {
           />
         );
       })}
+      {
+        // the pagination component, allow the user to see the other pages with more pokemons listed
+      }
       <Pagination
         currentPage={currentPage}
         totalCount={lenght}

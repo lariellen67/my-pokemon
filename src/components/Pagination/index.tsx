@@ -47,6 +47,9 @@ function Pagination({
 
   return (
     <Container>
+      {
+        // disabled param don't allow the user to continue the pagination backwards from the first page
+      }
       <PaginationItem disabled={currentPage === 1} onClick={onPrevious}>
         <ArrowLeft />
       </PaginationItem>
@@ -64,6 +67,9 @@ function Pagination({
           </PaginationItem>
         );
       })}
+      {
+        // disabled param don't allow the user to continue the pagination further than the last page
+      }
       <PaginationItem disabled={currentPage === lastPage} onClick={onNext}>
         <ArrowRight />
       </PaginationItem>

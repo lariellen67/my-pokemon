@@ -10,6 +10,9 @@ import { Surprise } from '../pages/Surprise';
 function Routes() {
   return (
     <Router>
+      {
+        // the element param is filled with Layout and Content components, so the entire application, can have access to the Header component and use navigation between the screens
+      }
       <Route
         element={
           <Layout>

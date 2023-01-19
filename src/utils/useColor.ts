@@ -1,5 +1,5 @@
 import { useTheme } from 'styled-components';
-
+// creation of a hook that allows changing the color according to the type of pokémon
 export const useColor = (type: string) => {
   const theme = useTheme();
 
