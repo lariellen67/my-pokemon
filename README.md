@@ -55,6 +55,10 @@ To Visit The Application:
 
 `localhost:3000/`
 
+## :dart: Future Features (Soon)
+
+This is a responsive application, but reaches a maximum size of a standard tablet (768 x 465). Soon it will be available for mobile devices.
+
 ---
 
 Made with ♥ by Larissa Marques
