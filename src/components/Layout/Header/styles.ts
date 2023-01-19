@@ -36,7 +36,7 @@ export const Menu = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 12%;
+  width: 120px;
   list-style: none;
   text-decoration: none;
   margin-right: 30px;
